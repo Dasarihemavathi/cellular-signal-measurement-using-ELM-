@@ -1,4 +1,4 @@
- Cellular Signal Measurement and Classification Using Extreme Learning Machine (ELM)
+Cellular Signal Measurement and Classification Using Extreme Learning Machine (ELM)
 
 🌐 Project Overview
 A machine learning project that measures and classifies cellular signals from real-world spectrum data using the Extreme Learning Machine (ELM) algorithm. The system predicts the type of signal present in the spectrum such as WiFi, LTE and other cellular signals.
@@ -49,8 +49,8 @@ ELM was chosen because it trains significantly faster than traditional neural ne
 
 🚀 How to Run This Project
 1. Clone the Repository
-bashgit clone https://github.com/Dasarihemavathi/your-repo-name.git
-cd your-repo-name
+bashgit clone https://github.com/Dasarihemavathi/cellular-signal-measurement-using-ELM-.git
+cd cellular-signal-measurement-using-ELM-
 2. Create Virtual Environment
 bashpython -m venv venv
 venv\Scripts\activate        # Windows
@@ -60,6 +60,8 @@ bashpip install -r requirements.txt
 4. Run the Project
 bashpython main.py
 
+
+
 📈 Results
 
 Successfully classified cellular signal types from real spectrum data
@@ -67,14 +69,11 @@ Achieved 76.5% accuracy using ELM algorithm
 ELM showed significantly faster training compared to traditional neural networks
 Model performs well despite natural noise present in real world spectrum data
 
+Team Lead: Dasari Hemavathi 
 
-👩‍💻 Developer
-Dasari Hemavathi
-
-📧 dasarihemavathi@gmail.com
-🔗 LinkedIn
-🐙 GitHub
-
+📧 dasarihemavathi8541@gmail.com
+🔗 linkedin.com/in/dasarihemavathi
+🐙 github.com/Dasarihemavathi
 
 🎓 Academic Details
 
@@ -82,3 +81,4 @@ Project Type: College Final Year Project
 Institution: Krishna Chaitanya Institute of Technology and Sciences (KCITS)
 Department: Computer Science and Engineering
 Year: 2026
+
