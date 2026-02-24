@@ -1,0 +1,64 @@
+
+<style>
+    h1 {
+        color: blueviolet;
+        font-size: 2.5rem;
+        font-family: 'Georgia', serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        margin-bottom: 20px;
+    }
+
+    .info-box {
+        background-color: rgba(0, 0, 0, 0.5); /* Light black with transparency */
+        padding: 20px 30px;
+        border-radius: 10px;
+        color: white;
+        max-width: 800px;
+        margin: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .btn-explore {
+        padding: 10px 25px;
+        font-size: 1.1rem;
+        background-color: #007bff;
+        border: none;
+        color: white;
+    }
+
+    .btn-explore:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    .content-wrapper {
+        margin-top: 50px;
+        text-align: center;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+    
+</style>
+
+<div class="content d-flex flex-column align-items-center">
+    <div class="content-wrapper">
+        <h1>cellular signal measurement</h1>
+        <div class="info-box">
+            <p>
+               An Extreme Learning Machine (ELM) model to identify GSM, UMTS, and LTE cellular signals using
+               over-the-air power spectral density (PSD) measurements. The ELM achieves near-perfect accuracy 
+               with significantly reduced training time compared to existing models. 
+               Its robustness is validated on two distinct datasets, showing high generalization performance.
+            </p>
+            <a href="{% url 'UserLogin' %}" class="btn btn-explore">Start Predicting</a>
+        </div>
+    </div>
+</div>

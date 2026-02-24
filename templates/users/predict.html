@@ -1,0 +1,68 @@
+{% extends 'users/userbase.html' %}
+
+{% block contents %}
+{% load static %}
+
+<style>
+  body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .outer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+
+  .center-container {
+    text-align: center;
+    margin-left :600px;
+    padding: 30px;
+    background-color: rgba(30, 60, 90, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 0 10px whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    color: whitesmoke;
+  }
+
+  .center-container h2,
+  .center-container h3,
+  .center-container p {
+    color: whitesmoke;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<div class="outer-wrapper">
+  <div class="center-container">
+    <h2>🎯 Predict Signal Type</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+      <h3>✅ Predicted Label: {{ prediction }}</h3>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

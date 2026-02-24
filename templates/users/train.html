@@ -1,0 +1,97 @@
+{% extends 'users/userbase.html' %}
+
+{% block contents %}
+{% load static %}
+{% load custom_filters %}
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .centered-container {
+    max-width: 90%;
+    padding: 20px;
+    margin-left: 600px;
+  }
+
+  h2, h1 {
+    color: yellowgreen;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: yellowgreen;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: auto;
+  }
+
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+
+  th, td {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f0f0f0;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #eef;
+  }
+</style>
+
+<div class="page-wrapper">
+  <div class="centered-container">
+    <h2>✅ Training Complete</h2>
+    <p><strong><h1>Accuracy:</strong> {{ accuracy }}</p></h1>
+
+    <h1>Confusion Matrix</h1>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          {% for label in labels %}
+            <th>{{ label }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in confusion_matrix %}
+          <tr>
+            <td><strong>{{ labels|index:forloop.counter0 }}</strong></td>
+            {% for cell in row %}
+              <td>{{ cell }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'users/userbase.html' %}
+
+{% block contents %}
+{% load static %}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;      
+        background-image: url("https://t3.ftcdn.net/jpg/08/49/60/46/240_F_849604647_1PRuxevQBwqxXsqTbylAOfkYiYfPFtFY.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding-left: 420px; /* accounting for sidebar nav */
+        
+    }
+
+    .content-box {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-radius: 15px;
+        max-width: 700px;
+    }
+
+    .content-box h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00e6e6;
+    }
+
+    .content-box p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #f0f0f0;
+    }
+</style>
+
+<div class="center-content">
+    <div class="content-box">
+        <h2>Welcome to cellular_signal_measurements System</h2>
+        <p>
+            This platform empowers users to predict snowfall patterns using machine learning algorithms.
+            Based on temperature, humidity, wind, and other meteorological parameters, our model provides accurate snow forecasts.
+            Use the sidebar to explore datasets, train the model, or analyze predictions. Stay informed. Stay prepared.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
